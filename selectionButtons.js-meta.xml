@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <isExposed>true</isExposed>
+        <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="componentId" type="String" label="Component ID" description="Please give the component a unique ID." role="inputOnly" required="true"/>
+            <property name="textInput" type="String" label="Text input" description="Text to be displayed." role="inputOnly"/>
+            <property name="input" type="String" label="JSON input" description="Button metadata. See README file for JSON template." required="true"/>
+            <property name="minSelection" type="Integer" label="Minimum selection"/>
+            <property name="maxSelection" type="Integer" label="Maximum selection" description="Set the maximum number of buttons selected (If this is over 0, it will enable multi select)." role="inputOnly"/>
+            <property name="navigateToNextScreen" type="Boolean" label="Navigate to next screen" description="Set to true to navigate to next flow screen on first button select." role="inputOnly"/>
+            <property name="outputValueSingle" type="String" label="Single output values" description="Single output value" role="outputOnly"/>
+            <property name="outputValuesArray" type="String[]" label="Output values array" description="Array of button values, use for multi select" role="outputOnly"/>
+            <property name="isValid" type="Boolean" label="Is valid" description="Boolean to show outcome of required validation." role="outputOnly"/>
+            <property name="resetValues" type="Boolean" label="Reset values on navigate" description="Reset values to original setup if the screen is navigated back to." role="inputOnly"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

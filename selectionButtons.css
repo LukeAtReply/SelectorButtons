@@ -1,0 +1,28 @@
+h1{
+    font-size: 16px;
+    margin-bottom: 17px;
+}
+
+small{
+    font-size: 12px;
+    position:absolute;
+    top:1.8rem;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width: 100%;
+}
+
+button{
+    min-width: 110px;
+}
+
+.container{
+    margin: 30px;
+}
+
+.slds-popover{
+    position:absolute;
+    bottom:3rem;
+    left:2rem;
+    width: 100%;
+}

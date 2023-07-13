@@ -1,0 +1,20 @@
+<template>
+    <div class="container slds-m-bottom_x-large slds-is-relative">
+        <h1 class="slds-grid slds-grid_align-center slds-is-relative">
+            {textInput}
+        </h1>
+        <template if:true={errorMessage}>
+                <small class="slds-align_absolute-center slds-text-color_destructive">{errorMessage}</small>
+        </template>
+        <div class="slds-grid slds-grid_align-center slds-wrap slds-gutters">
+            <template for:each={buttonList} for:item="button">
+                <div class="slds-col slds-p-horizontal_medium slds-is-relative slds-m-around_xxx-small" key={button.id}>
+                    <button value={button.value} class={button.class} key={button.id} onmouseleave={handleHover} onmouseover={handleHover} onclick={handleClick} data-button-id={button.id}>{button.label} </button>
+                    <div if:true={button.showTooltip} key={button.id} class="slds-popover slds-popover_tooltip slds-nubbin_bottom-left slds-rise-from-ground" role="tooltip">
+                        <div class="slds-popover__body">{button.helpText}</div>
+                    </div>    
+                </div>
+            </template>
+        </div>
+    </div>
+</template>
